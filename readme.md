@@ -1,10 +1,8 @@
-# Bare Metal Series
-
-- [Series Playlist](https://www.youtube.com/playlist?list=PLP29wDx6QmW7HaCrRydOnxcy8QmW0SNdQ)
+# Bare Metal STM32
 
 ## About the project
 
-This series is all about building bare-metal firmware for a Cortex-M4 STM32 microcontroller, using open source tools and libraries such as GCC and libopencm3. The project will cover everything from blinking an LED, to building a bootloader for performing firmware updates over UART/USB, to building a signed firmware security mechanism that allow only authorised code to run on the device. Stretch goal content includes *breaking* the security we build, as well as exploring more peripherals, applications, and algorithms in depth.
+Building bare-metal firmware for a Cortex-M4 STM32 microcontroller, using open source tools and libraries such as GCC and libopencm3. The project will cover everything from blinking an LED, to building a bootloader for performing firmware updates over UART/USB, to building a signed firmware security mechanism that allow only authorised code to run on the device.
 
 ## Prerequisites
 
@@ -13,7 +11,7 @@ You need to have the following installed and properly setup. Ensure that they ar
 - [GNU ARM Embedded tools](https://developer.arm.com/downloads/-/arm-gnu-toolchain-downloads)
 - [GNU Make](https://www.gnu.org/software/make/)
 
-### When using vscode
+### When using VSCode
 
 You'll want to install some extensions to make development smoother
 
@@ -43,17 +41,7 @@ make
 
 ## Debuggers
 
-### J-Link
-
-The YouTube series makes use of J-Link debugger hardware and JLinkGDBServer for integrating with VS Code's debug functionality.
-
-You can use the "JLink: Debug Application" and "JLink: Attach to active" VSCode tasks to debug your built binaries.
-
 ### ST-Link
-
-ST-Link is alternative debugger that you can use if you don't have a JLink debugger.
-
-If you're using the same STM32F401RE Nucleo board presented in the YouTube series, ST-Link debugging hardware is already provided on the board (see the [Day 0 video's Hardware section](https://youtu.be/uQQsDWLRDuI?t=1000)).
 
 It's recommended that you install the [ST-Link drivers](https://www.st.com/en/development-tools/stsw-link009.html).
 
