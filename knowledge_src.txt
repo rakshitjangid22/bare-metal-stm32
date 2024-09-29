@@ -1,0 +1,4 @@
+From a developer's point of view, reference manuals provide much more developer specific information as compared to 
+the datasheets...
+For this project, I will be referring to the reference manual for STM32F407. It is named as RM0090 Reference Manual.
+Additionally, datasheets might also be helpful at times, specifically from a hardware pov.
