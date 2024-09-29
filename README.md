@@ -22,7 +22,7 @@ You'll want to install some extensions to make development smoother
 
 ```bash
 # Clone the repo
-git clone git@github.com:lowbyteproductions/bare-metal-series.git
+git clone git@github.com:rakshitjangid22/bare-metal-stm32.git
 cd bare-metal-series
 
 # Initialise the submodules (libopencm3)
