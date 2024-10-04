@@ -21,7 +21,7 @@
 /* Define memory regions. */
 MEMORY
 {
-	rom 	 (rx)  : ORIGIN = 0x08000000, LENGTH = 1024K
+	rom 	 (rx)  : ORIGIN = 0x08000000, LENGTH = 64K
 	ram 	 (rwx) : ORIGIN = 0x20000000, LENGTH = 128K
 }
 
@@ -35,9 +35,6 @@ ENTRY(reset_handler)
 SECTIONS
 {
 	.text : {
-		KEEP (*(.bootloader_section))	/* The bootloader should be the first thing that goes into the memory (flash)*/
-		/* KEEP keyword above to ensure that the compiler doesn't discard the bootloader_section */ 
-
 		*(.vectors)	/* Vector table */
 		. = ALIGN(16);
 		*(.text*)	/* Program code */
