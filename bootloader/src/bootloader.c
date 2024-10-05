@@ -5,8 +5,10 @@
 #define MAIN_APP_START_ADDRESS (FLASH_BASE + BOOTLOADER_SIZE)
 
 static void jump_to_main(void){
-  typedef void (*void_fn)(void);                                            //  A function pointer
-  uint32_t* reset_vector_entry = (uint32_t*)(MAIN_APP_START_ADDRESS + 4U);  // Reset vector is the second entry in the vector table(each entry->4 bytes)
+  typedef void (*void_fn)(void);  // A function pointer
+
+  uint32_t* main_vector_table = (uint32_t*)(MAIN_APP_START_ADDRESS);
+  uint32_t* reset_vector_entry = &main_vector_table[1];  // Reset vector is the second entry in the vector table(each entry->4 bytes)
   uint32_t* reset_vector = (uint32_t*)(*reset_vector_entry);
 
   void_fn jump_fn = (void_fn)reset_vector;
