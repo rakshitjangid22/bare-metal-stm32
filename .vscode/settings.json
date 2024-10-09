@@ -11,6 +11,9 @@
     "sync.h": "c",
     "ring-buffer.h": "c",
     "flash_common_all.h": "c",
-    "memorymap.h": "c"
+    "memorymap.h": "c",
+    "system.h": "c",
+    "uart.h": "c",
+    "nvic.h": "c"
   }
 }
